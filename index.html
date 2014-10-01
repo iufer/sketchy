@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sketchy</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="author" content="Duarte">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name = "viewport" content="width = 768, user-scalable = yes">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sketchy.css">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/native.history.js"></script>    
+    <script src="js/bootstrap.js"></script>    
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <!-- <script src="js/firebase.js"></script> -->
+
+    <script src="js/sketchy.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="navbar xnavbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          
+            <ul class="nav">              
+              <li class="">                
+                <div class="navbar-form">                 
+                  <span class="navbar-text">Size</span>
+                  <div id="size" class="input-append input-prepend">                    
+                    <button class="btn btn-updown btn-down" type="button"><i class="icon-minus"></i></button>                  
+                    <span class="span1 input-updown uneditable-input" id="appendedInputButton"></span>
+                    <button class="btn btn-updown btn-up" type="button"><i class="icon-plus"></i></button>
+                  </div>
+                </div>
+              </li>
+              <li class="divider-vertical"></li>
+
+              <li class="">                
+                <div class="navbar-form">
+                  <span class="navbar-text">Opacity</span>
+                  <div id="opacity" class="input-append input-prepend">
+                    <button class="btn btn-updown btn-down" type="button"><i class="icon-minus"></i></button>                  
+                    <span class="span1 input-updown uneditable-input" id="appendedInputButton">100%</span>
+                    <button class="btn btn-updown btn-up" type="button"><i class="icon-plus"></i></button>
+                  </div>
+                </div>
+              </li>
+              <li class="divider-vertical"></li>
+
+              <li>
+                <div class="navbar-form">
+                  <a href="#" id="colorsPopover" data-toggle="popover" data-placement="bottom">
+                    <div class="color-chip">Color</div>
+                  </a>
+                </div>
+              </li>
+
+              <li class="divider-vertical"></li>                
+
+              <li>
+                <div class="navbar-form">
+                 <input class="span1" type="text" placeholder="Name" name="name">
+                </div>
+              </li>
+
+              <li class="divider-vertical"></li>
+
+              <li>
+                <div class="navbar-form">
+                  <button id="undo" class="btn"><i class="icon-fast-backward "></i> Undo</button> 
+                  <button id="move" class="btn">Move</button>
+                  <button id="save" class="btn btn-success"><i class="icon-picture icon-white"></i> Save</button>                  
+                  <button id="new" class="btn btn-primary"><i class="icon-plus icon-white"></i> New</button>
+                  <button id="clear" class="btn btn-danger"><i class="icon-fire icon-white"></i> Clear</button>
+
+                  <button id="projector" class="btn"><i class="icon-adjust"></i></button>
+                </div>
+              </li>
+
+            </ul>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="row-fluid">
+        <div class="span12">
+          <div id="canvas-wrap">
+            <canvas id="sketchy" width="100" height"100"></canvas>
+          </div>
+          <div id="chat-wrap">
+            <div id="chat"></div>
+            <div id="input-wrap"><input type="text" id="input" class="left" placeholder="type your chat">
+              <button id="submit-chat" class="btn btn-primary">Submit</button>
+              <button id="clear-chat" class="btn btn-danger">Clear</button></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sketchy v0.7 -->
+
+  </body>
+</html>
